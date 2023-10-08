@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    transition: all 0.5s ease;
+    
+}
+
+.title{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+}
+
+h1{
+    color: yellow;
+    text-align: center;
+}
+
+.calculator {
+    background-image:url('https://i.ibb.co/xsT3wWq/206109-blue-pink-and-green-scattered-numbers-background-image.jpg') ;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+input {
+    width: 330px;
+    padding: 20px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    font-size: 45px;
+    text-align: right;
+}
+
+input::placeholder{
+    color: var(--input-dark1);
+}
+
+button{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover{
+    transform: scale(1.10);
+}
+
+.number{
+    color: white;
+}
+
+.number:hover, #clear:hover, .operator:hover, #equal:hover, #delete:hover{
+    border: 3px solid var(--border-dark);
+}
+
+#clear{
+    color: rgb(9, 9, 9);
+    font-weight: bolder;
+}
+
+.operator{
+    color: black;
+    font-weight: bolder;
+}
+
+#equal{
+    color: rgb(3, 3, 3);
+    width: 150px;
+    font-weight: bolder;
+}
+
+#delete{
+    color: rgb(9, 9, 9);
+    font-weight: bolder;
+}
+
+/* -----------------------------------------------------------------------------------------
+------------------------------Light Dark Mode--------------------------------------------
+----------------------------------------------------------------------------------------- */
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 20px;
+    border-radius: 50px;
+    margin-left: 70%;
+    margin-right: -3%;
+    margin-top: -10px;
+    background-image: url(https://i.ibb.co/cyQK66j/Screenshot-2020-04-16-at-1-07-06-PM.png);
+    background-size: cover;
+}
+
+input[type="checkbox"]::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-dark);
+    border-radius: 50px;
+}
+
+input[type="checkbox"]:checked:before{
+    transform: translate(100%);
+}
+
+input[type="checkbox"]:checked{
+    background-image: url(https://i.ibb.co/zFjwSPm/Screenshot-2020-04-16-at-1-07-19-PM.png);
+}
+
+body{
+    --primary-dark: rgba(55, 65, 81, 1);
+    --secondary-dark: rgb(83, 83, 233);
+    --third-dark:  rgb(224, 82, 198);
+    --fourth-dark:   rgb(227, 81, 81);
+    --fifth-dark:   rgb(55, 238, 14);
+    --main-dark:  aliceblue;
+    --input-dark:  rgb(0, 0, 0);
+    --input-dark1:  rgb(255, 255, 255);
+    --border-dark:  rgb(4, 4, 4);
+}
+
+.mydark-content{
+    --primary-dark:rgba(243, 244, 246,1);
+    --secondary-dark: rgb(97, 97, 248);
+    --third-dark:  rgb(244, 103, 218);
+    --fourth-dark:  rgb(245, 92, 92);
+    --fifth-dark:   rgb(104, 242, 73);
+    --main-dark:  rgb(0, 0, 0);
+    --input-dark:  rgb(255, 255, 255);
+    --input-dark1:  rgb(0, 0, 0);
+    --border-dark:  rgb(238, 255, 0);
+}
+
+.primary-dark{
+    color: var(--primary-dark);
+}
+
+.secondary-dark{
+    background-color: var(--secondary-dark);
+}
+
+.third-dark{
+    background-color: var(--third-dark);
+}
+
+.fourth-dark{
+    background-color: var(--fourth-dark);
+}
+
+.fifth-dark{
+    background-color: var(--fifth-dark);
+}
+
+.main-dark{
+    background-color: var(--main-dark);
+}
+
+.input-dark{
+    background-color: var(--input-dark); 
+}
+
+.input-dark1{
+    color: var(--input-dark1);
+}
+
+.border-dark{
+    background-color: var(--border-dark); 
+}
